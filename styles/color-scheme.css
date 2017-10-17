@@ -1,0 +1,46 @@
+:root{
+  --main:#000060;
+  --grayish:#d4d4d4;
+  --text:#777;
+}
+
+/* Sideline */
+#sideline{
+  box-shadow:-2px 0px 4px var(--text);
+  background-color:var(--main);
+  position:fixed;
+  top:0px;
+  right:0px;
+  height:100%;
+  width:15px;
+}
+
+/* Profile picture */
+#image-wrapper{
+  box-shadow:2px 2px 4px var(--text);
+  background-color:var(--main);
+  border-top-right-radius:100%;
+  border-bottom-right-radius:100%;
+  position:absolute;
+  left:0px;
+}
+#image{
+  border-radius:100%;
+  position:absolute;
+}
+
+/* Text */
+body{
+  color:var(--text);
+}
+h1,h2,h3,h4,h5,h6{
+  margin-top:0px;
+  margin-bottom:var(--margin);
+  color:var(--main);
+}
+.title{
+  color:var(--main);
+  font-size:30px;
+  border-bottom:1px solid var(--grayish);
+  margin-bottom:var(--margin);
+}
