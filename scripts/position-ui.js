@@ -38,7 +38,8 @@ function sizeContent(){
 
   var bottom=$("#content").offset().top+$("#content").height()+50;
   if(bottom>$(window).height()){
-    $("#signature").css("top",(bottom+parseInt($("body").css("--margin")))+"px");
+    bottom+=parseInt($("body").css("--margin"));
+    $("#signature").css("top",bottom+"px");
     $("#signature").css("bottom","auto");
   }else{
     $("#signature").css("bottom","5px");
