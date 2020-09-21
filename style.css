@@ -1,0 +1,149 @@
+/* General */
+:root{
+  --shadow:0 0 2px #777777;
+  --link-hov:#23527c;
+  --grayish:#d4d4d4;
+  --white:#ffffff;
+  --link:#337ab7;
+  --main:#000060;
+  --text:#777777;
+}
+body{
+  background-color:var(--white);
+  color:var(--text);
+  font-family:Lato;
+  font-size:18px;
+  padding:0;
+  margin:0;
+}
+h1,h2,h3,h4,h5,h6{
+  margin-bottom:15px;
+  color:var(--main);
+  margin-top:0px;
+}
+hr{
+  border:solid 1px var(--grayish);
+  margin:50px 0;
+}
+a{
+  text-decoration:none;
+  color:var(--link);
+}
+a:hover{
+  text-decoration:underline;
+  color:var(--link-hov);
+}
+.title{
+  border-bottom:1px solid var(--grayish);
+  display:inline-block;
+  margin-bottom:15px;
+  color:var(--main);
+  font-size:30px;
+}
+.center{
+  text-align:center;
+}
+@font-face{
+  font-family:"Lato";
+  src:url("./fonts/Lato-Regular.ttf");
+}
+@font-face{
+  font-family:"Lato";
+  src:url("./fonts/Lato-Bold.ttf");
+  font-weight:bold;
+}
+
+/* Sideline */
+.sideline{
+  background-color:var(--main);
+  box-shadow:var(--shadow);
+  position:fixed;
+  height:100%;
+  width:15px;
+  z-index:1;
+  right:0px;
+  top:0px;
+}
+@media only screen and (max-width:1050px){
+  .sideline{
+    display:none;
+  }
+}
+
+/* Profile picture */
+.image-wrapper{
+  border-bottom-right-radius:100%;
+  border-top-right-radius:100%;
+  background-color:var(--main);
+  box-shadow:var(--shadow);
+  position:absolute;
+  height:220px;
+  width:240px;
+  left:0px;
+  top:15px;
+}
+.image-wrapper img{
+  border-radius:100%;
+  position:absolute;
+  width:200px;
+  right:10px;
+  top:10px;
+}
+@media only screen and (max-width:1050px){
+  .image-wrapper{
+    position:relative;
+    border-radius:0;
+    box-shadow:none;
+    width:100%;
+    top:0;
+  }
+  .image-wrapper img{
+    transform:translateX(50%);
+    right:50%;
+  }
+}
+
+/* Content */
+.content{
+  min-height:calc(100vh - 83px);
+  text-align:justify;
+  margin-left:240px;
+  position:relative;
+  padding:20px 15%;
+}
+.triple{
+  grid-template-columns:32% 32% 32%;
+  grid-column-gap:2%;
+  text-align:center;
+  display:grid;
+}
+.triple > div{
+  background-color:var(--white);
+  box-shadow:var(--shadow);
+  padding:15px 0;
+}
+@media only screen and (max-width:1450px){
+  .content{
+    padding:20px 5%;
+  }
+}
+@media only screen and (max-width:1050px){
+  .content{
+    padding:20px 10px;
+    margin-left:0;
+  }
+}
+@media only screen and (max-width:900px){
+  .triple{
+    grid-template-columns:100%;
+  }
+  .triple > div{
+    margin-bottom:25px;
+  }
+}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding:5px 0;
+}
